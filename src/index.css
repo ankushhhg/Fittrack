@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Playfair+Display:ital,wght@1,400;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  
+  --color-indigo-50: rgba(203, 255, 46, 0.08);
+  --color-indigo-100: rgba(203, 255, 46, 0.15);
+  --color-indigo-200: rgba(203, 255, 46, 0.25);
+  --color-indigo-300: rgba(203, 255, 46, 0.4);
+  --color-indigo-400: #CBFF2E;
+  --color-indigo-500: #CBFF2E;
+  --color-indigo-600: #CBFF2E;
+  --color-indigo-700: #bef21c;
+  --color-indigo-800: #abe00f;
+  --color-indigo-900: #91bf05;
+  --color-indigo-950: #0a0e01;
+  
+  --color-slate-50: var(--slate-50);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-800: var(--slate-800);
+  --color-slate-900: var(--slate-900);
+  --color-slate-950: var(--slate-950);
+
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
+
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-gray-950: var(--gray-950);
+}
+
+:root {
+  --bg-primary: #050505;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --text-primary: #F5F5F5;
+  --text-secondary: rgba(255, 255, 255, 0.45);
+  --border: rgba(255, 255, 255, 0.09);
+  --accent: #CBFF2E;
+  --accent-glow: rgba(203, 255, 46, 0.15);
+
+  /* Slate colors for Dark Theme */
+  --slate-50: rgba(255, 255, 255, 0.02);
+  --slate-100: rgba(255, 255, 255, 0.04);
+  --slate-200: rgba(255, 255, 255, 0.08);
+  --slate-300: rgba(255, 255, 255, 0.2);
+  --slate-400: rgba(255, 255, 255, 0.4);
+  --slate-500: rgba(255, 255, 255, 0.55);
+  --slate-600: rgba(255, 255, 255, 0.65);
+  --slate-700: rgba(255, 255, 255, 0.75);
+  --slate-800: rgba(255, 255, 255, 0.85);
+  --slate-900: #0a0a0a;
+  --slate-950: #050505;
+
+  /* Neutral colors for Dark Theme */
+  --neutral-50: rgba(255, 255, 255, 0.02);
+  --neutral-100: rgba(255, 255, 255, 0.04);
+  --neutral-200: rgba(255, 255, 255, 0.08);
+  --neutral-300: rgba(255, 255, 255, 0.2);
+  --neutral-400: rgba(255, 255, 255, 0.4);
+  --neutral-500: rgba(255, 255, 255, 0.55);
+  --neutral-600: rgba(255, 255, 255, 0.65);
+  --neutral-700: rgba(255, 255, 255, 0.75);
+  --neutral-800: rgba(255, 255, 255, 0.85);
+  --neutral-900: #0a0a0a;
+  --neutral-950: #050505;
+
+  /* Gray colors for Dark Theme */
+  --gray-50: rgba(255, 255, 255, 0.02);
+  --gray-100: rgba(255, 255, 255, 0.04);
+  --gray-200: rgba(255, 255, 255, 0.08);
+  --gray-300: rgba(255, 255, 255, 0.2);
+  --gray-400: rgba(255, 255, 255, 0.4);
+  --gray-500: rgba(255, 255, 255, 0.55);
+  --gray-600: rgba(255, 255, 255, 0.65);
+  --gray-700: rgba(255, 255, 255, 0.75);
+  --gray-800: rgba(255, 255, 255, 0.85);
+  --gray-900: #0a0a0a;
+  --gray-950: #050505;
+}
+
+[data-theme="light"] {
+  --bg-primary: #F9FAFB;
+  --bg-card: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #4B5563;
+  --border: #E5E7EB;
+  --accent: #CBFF2E;
+  --accent-glow: rgba(203, 255, 46, 0.15);
+
+  /* Slate colors for Light Theme */
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+  --slate-950: #020617;
+
+  /* Neutral colors for Light Theme */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+
+  /* Gray colors for Light Theme */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --gray-950: #030712;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #050505;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --text-primary: #F5F5F5;
+  --text-secondary: rgba(255, 255, 255, 0.45);
+  --border: rgba(255, 255, 255, 0.09);
+  --accent: #CBFF2E;
+  --accent-glow: rgba(203, 255, 46, 0.15);
+
+  /* Slate colors for Dark Theme */
+  --slate-50: rgba(255, 255, 255, 0.02);
+  --slate-100: rgba(255, 255, 255, 0.04);
+  --slate-200: rgba(255, 255, 255, 0.08);
+  --slate-300: rgba(255, 255, 255, 0.2);
+  --slate-400: rgba(255, 255, 255, 0.4);
+  --slate-500: rgba(255, 255, 255, 0.55);
+  --slate-600: rgba(255, 255, 255, 0.65);
+  --slate-700: rgba(255, 255, 255, 0.75);
+  --slate-800: rgba(255, 255, 255, 0.85);
+  --slate-900: #0a0a0a;
+  --slate-950: #050505;
+
+  /* Neutral colors for Dark Theme */
+  --neutral-50: rgba(255, 255, 255, 0.02);
+  --neutral-100: rgba(255, 255, 255, 0.04);
+  --neutral-200: rgba(255, 255, 255, 0.08);
+  --neutral-300: rgba(255, 255, 255, 0.2);
+  --neutral-400: rgba(255, 255, 255, 0.4);
+  --neutral-500: rgba(255, 255, 255, 0.55);
+  --neutral-600: rgba(255, 255, 255, 0.65);
+  --neutral-700: rgba(255, 255, 255, 0.75);
+  --neutral-800: rgba(255, 255, 255, 0.85);
+  --neutral-900: #0a0a0a;
+  --neutral-950: #050505;
+
+  /* Gray colors for Dark Theme */
+  --gray-50: rgba(255, 255, 255, 0.02);
+  --gray-100: rgba(255, 255, 255, 0.04);
+  --gray-200: rgba(255, 255, 255, 0.08);
+  --gray-300: rgba(255, 255, 255, 0.2);
+  --gray-400: rgba(255, 255, 255, 0.4);
+  --gray-500: rgba(255, 255, 255, 0.55);
+  --gray-600: rgba(255, 255, 255, 0.65);
+  --gray-700: rgba(255, 255, 255, 0.75);
+  --gray-800: rgba(255, 255, 255, 0.85);
+  --gray-900: #0a0a0a;
+  --gray-950: #050505;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.15s ease;
+}
+
+/* Sophisticated custom card styling mapping to all components utilizing card */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.card:hover {
+  border-color: rgba(203, 255, 46, 0.25);
+  box-shadow: 0 10px 40px -15px rgba(203, 255, 46, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Custom Sleek Input Override */
+input[type="text"], input[type="number"], input[type="email"], input[type="password"], select, textarea {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-primary) !important;
+  border-radius: 0.75rem !important;
+  transition: all 0.2s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: #CBFF2E !important;
+  box-shadow: 0 0 0 1px #CBFF2E !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CBFF2E;
+}
+
+/* Aesthetic ambient glows */
+.glow-spot {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(203, 255, 46, 0.07);
+  filter: blur(80px);
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Fade in animation entries */
+.page-enter {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

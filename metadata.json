@@ -1,0 +1,6 @@
+{
+  "name": "FitTrack",
+  "description": "An elegant, AI-powered personal fitness and nutrition tracking application. Generate personalized workout and meal plans, track sessions in real-time, monitor macros, and visualize your progress.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
